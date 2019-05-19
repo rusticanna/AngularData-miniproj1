@@ -6,5 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'AngularData-miniproj1';
+  name = 'Colin Knill';
+  
+  isEmpty():boolean {
+    return name === "";
+  }
+  // function to print to console.log
+  printText() {
+    console.log('Hey there');
+  }
 }
