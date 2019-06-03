@@ -1,3 +1,13 @@
-<p>
-  Student Name: {{ studentName }}
-</p>
+<div style="border:2px solid red; padding: 10px;">
+
+  <p>
+    Student Name: {{ studentName }}
+  </p>
+
+  <div *ngIf="selectedStudent">
+  Name: {{ selectedStudent.name }};
+  GPA: {{ selectedStudent.gpa }};
+  Section: {{ selectedStudent.section }};
+  </div>
+
+</div>

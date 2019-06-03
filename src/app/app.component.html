@@ -10,6 +10,13 @@
 <button (click)="printText()">Click Me</button>
 
 <h2 [class.textColour]="!name">Good Morning!</h2>
+<h2>{{ printName() }}</h2>
 <hr />
 <!-- this is a new module created specifying app.module.ts -->
-<app-students [studentName]="name"></app-students>
+<ul>
+  <li *ngFor="let student of students" (click)="setCurrentStudent(student)">{{ student.name }}</li>
+</ul>
+
+<hr />
+
+<app-students [studentName]="name" [selectedStudent]="currentStudent"></app-students>
